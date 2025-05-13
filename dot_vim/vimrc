@@ -1,0 +1,4 @@
+source ~/.vim/core/keymap.vim
+source ~/.vim/core/ui.vim
+source ~/.vim/core/behavior.vim
+source ~/.vim/core/colorscheme.vim
