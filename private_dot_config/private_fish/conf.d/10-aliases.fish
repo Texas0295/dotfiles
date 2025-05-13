@@ -9,3 +9,4 @@ alias gpll="git pull"
 alias gcmt="git commit -m"
 
 alias mutt="~/.local/scripts/mutt.sh"
+alias pyenv="source ~/.local/venv/bin/activate.fish"
