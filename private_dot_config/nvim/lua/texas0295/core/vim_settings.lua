@@ -4,6 +4,7 @@ vim.filetype.add({
         asm = "asm",
     },
 })
+
 vim.diagnostic.config({
     virtual_text = false,
     signs = false,
