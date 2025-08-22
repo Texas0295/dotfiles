@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","network","cpu","memory","custom/media","custom/vpn","tray"],
+	"modules-left": ["custom/launcher","network","cpu","memory","disk","custom/media","custom/vpn","tray"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/updates","backlight","pulseaudio","clock", "battery","custom/power"],
+	"modules-right": ["custom/copy_progress","custom/updates","backlight","pulseaudio","clock", "battery","custom/power"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
@@ -17,6 +17,12 @@
         "format": "{}",
         "interval": 30,
         "exec": "~/.config/waybar/checkvpn.sh"
+    },
+    "disk": {
+        "path": "/home",
+        "format": "󰨣 {percentage_used}%",
+        "interval": 30,
+        "tooltip": true
     },
 	"hyprland/workspaces": {
             "format": "{icon}",
@@ -93,5 +99,11 @@
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
         "interval": 15
+    },
+    "custom/copy_progress": {
+        "format": "Copying: {}%",
+        "exec": "cat /tmp/copy_progress 2>/dev/null",
+        "exec-if": "[[ $(cat /tmp/copy_progress 2>/dev/null) != 0 ]]",
+        "interval": 1
     }
 }

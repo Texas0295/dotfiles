@@ -45,6 +45,14 @@ window#waybar {
 	background: transparent;
 }
 
+#custom-copy_progress {
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: none;
+	color: #bdbdbd;
+	background: transparent;
+}
+
 #pulseaudio {
 	padding-left: 10px;
 	padding-right: 10px;
@@ -99,6 +107,13 @@ window#waybar {
 }
 
 #memory {
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: none;
+	color: #bdbdbd;
+	background: transparent;
+}
+#disk {
 	padding-left: 10px;
 	padding-right: 10px;
 	transition: none;
